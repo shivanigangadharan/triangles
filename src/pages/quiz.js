@@ -12,23 +12,34 @@ const Question = styled.div`
 
 function Quiz() {
 
-    const [score, setScore] = useState(0);
+    const [score, setScore] = useState([0, 0, 0]);
     const [value, setValue] = useState();
     const [showScore, setShowScore] = useState(true);
+    const [final, setFinal] = useState();
 
     function handleClick(p, e) {
-
-        if (p.target.value == e.a) {
-            setScore(score + 1);
+        var sel = p.target.value;
+        var s = score;
+        if (sel == e.a) {
+            console.log(sel, e.a, e.id);
+            s[e.id] = 1;
         }
-
-        //e.name -> gives unique id
-        //e.defaultValue -> gives selected option value eg: option3
+        else {
+            s[e.id] = 0;
+        }
+        // console.log(s)
+        setScore(s);
+        console.log('scr=', score);
     }
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log('score ', score);
+        var sum = 0;
+        for (var i = 0; i < score.length; i++) {
+            sum += score[i];
+        }
+        setFinal(sum);
+        console.log('score ', final);
         setShowScore(false);
     }
     return (
@@ -36,7 +47,7 @@ function Quiz() {
             <Navbar />
             <h1> Quiz on triangles</h1>
             <h3> For each correct answer, you get 1 point </h3>
-            <form>
+            <form onSubmit={handleSubmit}>
 
                 {
                     qna.map((e) => {
@@ -50,9 +61,9 @@ function Quiz() {
                         )
                     })
                 }
-                <button onClick={handleSubmit}> See answers </button>
+                <button type="submit"> See answers </button>
                 <div hidden={showScore}>
-                    <h1> Score : {score} </h1>
+                    <h1> Score : {final} </h1>
                 </div>
             </form>
         </div>
