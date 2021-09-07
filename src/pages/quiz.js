@@ -21,15 +21,12 @@ function Quiz() {
         var sel = p.target.value;
         var s = score;
         if (sel == e.a) {
-            console.log(sel, e.a, e.id);
             s[e.id] = 1;
         }
         else {
             s[e.id] = 0;
         }
-        // console.log(s)
         setScore(s);
-        console.log('scr=', score);
     }
 
     function handleSubmit(e) {
