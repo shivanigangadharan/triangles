@@ -36,6 +36,7 @@ function Angles() {
                 <div hidden={isTriangle == undefined ? true : false}>
                     {isTriangle}
                 </div>
+                {/* EDITS REQUIRED HERE --> FOR CORNER CASE WHEN ANGLE IS ZERO , SHOULD GIVE ERROR */}
             </form>
         </div>
     );
