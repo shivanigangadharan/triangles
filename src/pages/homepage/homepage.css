@@ -1,0 +1,8 @@
+.main{
+    background-image: url('../../images/trianglesBg.jfif');
+    background-position: center;
+    background-size: cover;
+    height: 97vh;
+    padding: 1%;
+    font-family: 'Urbanist', sans-serif;
+}

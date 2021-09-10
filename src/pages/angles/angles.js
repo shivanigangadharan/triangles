@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '../components/navbar';
+import Navbar from '../../components/navbar';
 
 function Angles() {
     const [a1, setA1] = useState();

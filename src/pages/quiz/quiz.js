@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Navbar from '../components/navbar';
+import Navbar from '../../components/navbar';
 import styled from 'styled-components';
-import qna from '../data';
+import qna from '../../data';
 
 const Question = styled.div`
     border: 1px solid lightgrey;
