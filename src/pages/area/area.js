@@ -14,7 +14,7 @@ function Area(e) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        if (side1 < 0 || side2 < 0 || side3 < 0 || side1 == undefined || side2 == undefined || side3 == undefined) {
+        if (side1 <= 0 || side2 <= 0 || side3 <= 0 || side1 == undefined || side2 == undefined || side3 == undefined) {
             alert('Please enter valid input values.');
             return 0;
         }
@@ -25,7 +25,7 @@ function Area(e) {
     }
 
     function findArea(e) {
-        if(base < 0 || perpendicular < 0 || base == undefined || perpendicular == undefined){
+        if (base <= 0 || perpendicular <= 0 || base == undefined || perpendicular == undefined) {
             alert('Please enter valid input values.');
             return 0;
         }

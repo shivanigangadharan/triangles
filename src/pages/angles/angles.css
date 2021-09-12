@@ -14,7 +14,7 @@
 }
 .heading{
     font-family: 'Urbanist', sans-serif;
-    margin: 50px 0px 30px 0px;
+    margin: 50px;
     font-size: 3rem;
     color: rgb(172, 116, 13);
 }
@@ -24,5 +24,6 @@
     box-shadow: 2px 2px 5px 2px orange;
     color: white;
     width: max-content;
-    padding: 10px 30px 10px 30px;
+    padding: 5px 30px 5px 30px;
+    margin: 50px;
 }

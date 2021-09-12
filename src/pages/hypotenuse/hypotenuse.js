@@ -8,21 +8,25 @@ function Hypotenuse() {
     const [hypotenuse, setHypotenuse] = useState();
 
     function handleSubmit() {
+        if (base <= 0 || perpendicular <= 0 || base == undefined || perpendicular == undefined) {
+            alert('Please enter valid input values.');
+            return 0;
+        }
         setHypotenuse(Math.sqrt(base * base + perpendicular * perpendicular));
     }
 
     return (
         <div>
             <Navbar />
-            <h1> Hypotenuse </h1>
-            <label> Enter length of base (in cm) : </label>
-            <input onChange={(e) => setBase(e.target.value)} type="number" /> <br />
-            <label> Enter length of perpendicular (in cm) : </label>
-            <input onChange={(e) => setPerpendicular(e.target.value)} type="number" /><br />
-            <button onClick={handleSubmit}> Find hypotenuse </button>
-            <div hidden={hypotenuse == undefined ? true : false}>
-                <h2> Hypotenuse = {hypotenuse} cm </h2>
-            </div>
+            <center>
+                <h1 className="heading"> Hypotenuse </h1>
+                <input placeholder="Enter base length (cm)" className="angleInput" onChange={(e) => setBase(e.target.value)} type="number" /> <br />
+                <input placeholder="Enter perpendicular length (cm)" className="angleInput" onChange={(e) => setPerpendicular(e.target.value)} type="number" /><br />
+                <button id="submit" onClick={handleSubmit}> Find hypotenuse </button>
+                <div hidden={hypotenuse == undefined ? true : false}>
+                    <p id="result"> Hypotenuse = {hypotenuse} cm </p>
+                </div>
+            </center>
         </div >
     );
 }
