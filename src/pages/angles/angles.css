@@ -1,0 +1,28 @@
+.angleInput{
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    color: rgb(231, 129, 4);
+    width: 300px;
+    margin: 25px;
+    font-family: 'Urbanist', sans-serif;
+    border-bottom: 3px solid darkorange;
+}
+.angleInput::-webkit-input-placeholder{
+    color: orange;
+}
+.heading{
+    font-family: 'Urbanist', sans-serif;
+    margin: 50px 0px 30px 0px;
+    font-size: 3rem;
+    color: rgb(172, 116, 13);
+}
+#result{
+    border: 4px solid white;
+    background: orange;
+    box-shadow: 2px 2px 5px 2px orange;
+    color: white;
+    width: max-content;
+    padding: 10px 30px 10px 30px;
+}
