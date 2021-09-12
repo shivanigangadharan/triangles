@@ -1,36 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
-const Main = styled.div`
-// box-shadow: 1px 1px 3px 1px lightgrey;
-    display: flex;
-`
-const Brand = styled.h1`
-
-`
-const Links = styled.div`
-float: right;
-`
+import './navbar.css';
 
 function Navbar() {
     return (
-        <Main>
+        <div className="navbar">
 
-            <Links>
-                <Link to="/">
-                    <Brand>
-                        Triangle
-            </Brand>
+            <div>
+                <Link to="/" style={{ 'textDecoration': 'none' }}>
+                    <p className="brand"> Mad angle triangles </p>
                 </Link>
-                <Link to="/hypotenuse"> Hypotenuse </Link>
-                <Link to="/quiz"> Quiz </Link>
-                <Link to="/area"> Area </Link>
-                <Link to="/angles"> Angles </Link>
+            </div>
+            <div>
+                <Link to="/hypotenuse" className="links"> Hypotenuse </Link>
+                <Link className="links" to="/quiz"> Quiz </Link>
+                <Link className="links" to="/area"> Area </Link>
+                <Link className="links" to="/angles"> Angles </Link>
+            </div>
 
 
-            </Links>
-        </Main>
+        </div>
     );
 }
 
