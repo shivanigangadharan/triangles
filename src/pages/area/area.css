@@ -1,0 +1,25 @@
+#areaHeading{
+    color: rgb(172, 116, 13);
+    margin: 20px 0px 30px 50px;
+    font-size: 3rem;
+    font-family: 'Urbanist', sans-serif;
+}
+.areaBox{
+    width: max-content;
+    background: rgb(252, 192, 83);
+    border: 5px solid white;
+    box-shadow: 2px 2px 5px 2px rgb(252, 192,83);
+    margin: 10px 50px 0px 50px;
+    color: rgb(138, 91, 4);
+    font-family: 'Urbanist', sans-serif;
+    padding: 30px 15px 30px 15px;
+    font-size: 120%;
+}
+.areaIP{
+border: none;
+margin: 10px;
+padding: 10px;
+border-radius: 5px;
+box-shadow: 1px 1px 3px 1px orange;
+outline: none;
+}
