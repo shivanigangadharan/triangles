@@ -1,17 +1,21 @@
 #headings{
     margin: 30px 0px 20px 100px;
+    color: rgb(172, 116, 13);
+
 }
 
 .question{
-    border: 1px solid lightgrey;
+    border: 1px solid orange;
     padding: 1.5%;
     width: 600px;
     margin: 3%;
     text-align: left;
     font-size: 1.2rem;
 }
+
 .mainQuiz{
     font-family: 'Urbanist', sans-serif;
+    padding: 0px 0px 100px 0px;
 }
 .options{
     margin: 20px 5px 0px 25px;

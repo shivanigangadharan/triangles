@@ -5,21 +5,12 @@ import './navbar.css';
 function Navbar() {
     return (
         <div className="navbar">
-
-            <div>
-                <Link to="/" style={{ 'textDecoration': 'none' }}>
-                    <p className="brand"> Mad angle triangles </p>
-                </Link>
-            </div>
-            <div>
-                <Link to="/hypotenuse" className="links"> Hypotenuse </Link>
-                <Link className="links" to="/quiz"> Quiz </Link>
-                <Link className="links" to="/area"> Area </Link>
-                <Link className="links" to="/angles"> Angles </Link>
-            </div>
-
-
-        </div>
+            <Link className="brand" to="/" >Mad angle triangles</Link>
+            <Link className="links" to="/hypotenuse" > Hypotenuse </Link>
+            <Link className="links" to="/quiz"> Quiz </Link>
+            <Link className="links" to="/area"> Area </Link>
+            <Link className="links" to="/angles"> Angles </Link>
+        </div >
     );
 }
 

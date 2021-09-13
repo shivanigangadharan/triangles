@@ -1,20 +1,18 @@
 .navbar{
-    display: inline;
     font-family: 'Urbanist', sans-serif;
-    background: none;
+    padding: 25px 100px 25px 50px;
+    background: orange;
 }
 .brand{
-    color: rgb(241, 136, 7);
-    padding: 10px 0px 0px 40px;
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
+    color: white;
 }
 .links{
     float: right;
     text-decoration: none;
     font-size: 1.4rem;
-    right: 0;
-    margin: 0px 20px 0px 20px;
-
+    margin: 0px 20px 0px 10px;
+    color: white;
 }
