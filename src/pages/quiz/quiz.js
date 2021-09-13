@@ -48,16 +48,18 @@ function Quiz() {
                             return (
                                 <div className="question" key={e.id}>
                                     {e.q} <br />
-                                    <input className="options" name={e.id} value={e.o1} onClick={(p) => handleClick(p, e)} type="radio" /> {e.o1}
-                                    <input className="options" name={e.id} value={e.o2} onClick={(p) => handleClick(p, e)} type="radio" /> {e.o2}
-                                    <input className="options" name={e.id} value={e.o3} onClick={(p) => handleClick(p, e)} type="radio" /> {e.o3}
+                                    <input className="options" name={e.id} value={e.o1} onClick={(p) => handleClick(p, e)} type="radio" /> {e.o1}<br />
+                                    <input className="options" name={e.id} value={e.o2} onClick={(p) => handleClick(p, e)} type="radio" /> {e.o2}<br />
+                                    <input className="options" name={e.id} value={e.o3} onClick={(p) => handleClick(p, e)} type="radio" /> {e.o3}<br />
+                                    <input className="options" name={e.id} value={e.o4} onClick={(p) => handleClick(p, e)} type="radio" /> {e.o4}<br />
+
                                 </div>
                             )
                         })
                     }
                     <button id="submit" type="submit"> See score </button>
                     <div hidden={showScore}>
-                        <p> Score : {final} </p>
+                        <p id="result"> You score is = {final} </p>
                     </div>
                 </form></center>
         </div>

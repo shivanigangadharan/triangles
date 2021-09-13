@@ -5,12 +5,16 @@
 }
 
 .question{
-    border: 1px solid orange;
-    padding: 1.5%;
+    border: 1px solid white;
+    padding: 2%;
     width: 600px;
+    border-radius: 5px;
     margin: 3%;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    color: rgb(230, 128, 4);
+    box-shadow: 2px 2px 5px 2px lightgray;
 }
 
 .mainQuiz{
