@@ -10,8 +10,10 @@ function Angles() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        if (parseInt(a1) < 0 || parseInt(a2) < 0 || parseInt(a3) < 0) {
-            setIsTriangle("No, that's not a triangle.");
+
+        if (parseInt(a1) <= 0 || parseInt(a2) <= 0 || parseInt(a3) <= 0) {
+            alert("Please enter valid inputs for the angles.");
+            return 0;
         }
         else {
             if (parseInt(a1) + parseInt(a2) + parseInt(a3) == 180) {
@@ -31,7 +33,7 @@ function Angles() {
                     <input placeholder="Enter angle 1" className="angleInput" required onChange={(e) => setA1(e.target.value)} type="number" /><br />
                     <input placeholder="Enter angle 2" className="angleInput" required onChange={(e) => setA2(e.target.value)} type="number" /><br />
                     <input placeholder="Enter angle 3" className="angleInput" required onChange={(e) => setA3(e.target.value)} type="number" /><br />
-                    <button id="submit" onClick={handleSubmit}> Is triangle? </button>
+                    <button id="submit" onClick={handleSubmit}> Check triangle </button>
                     <p id="result" hidden={isTriangle == undefined ? true : false}>
                         {isTriangle}
                     </p>

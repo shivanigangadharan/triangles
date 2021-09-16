@@ -5,7 +5,7 @@
     font-family: 'Urbanist', sans-serif;
 }
 .areaBox{
-    width: max-content;
+    width: 500px;
     background: rgb(252, 192, 83);
     border: 5px solid white;
     box-shadow: 2px 2px 5px 2px rgb(252, 192,83);

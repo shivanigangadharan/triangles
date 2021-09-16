@@ -15,12 +15,17 @@ function Area(e) {
     function handleSubmit(e) {
         e.preventDefault();
         if (side1 <= 0 || side2 <= 0 || side3 <= 0 || side1 == undefined || side2 == undefined || side3 == undefined) {
-            alert('Please enter valid input values.');
+            alert('Please enter non zero, positive values.');
             return 0;
         }
+        if (side1 + side2 <= side3 || side2 + side3 <= side1 || side1 + side3 <= side1) {
+            alert('Please enter valid input values. The sum of any 2 sides should always be greater than the third side for a valid triangle.');
+            return 0;
+        }
+
         var s = (side1 + side2 + side3) / 2;
         console.log(side1 + side2 + side3);
-        setArea(Math.sqrt(s * (s - side1) * (s - side2) * (s - side3)));
+        setArea(parseFloat(Math.sqrt(s * (s - side1) * (s - side2) * (s - side3))).toFixed(3));
         console.log(area)
     }
 
@@ -50,9 +55,8 @@ function Area(e) {
                         <input className="areaIP" required onChange={(e) => setSide3(parseInt(e.target.value))} type="number" /><br />
                         <center><button id="submit" onClick={handleSubmit}> Calculate Area </button></center>
                         <div hidden={area == undefined ? true : false}>
-                            <p> Area of triangle using Heron's formula = {area} square centimeter</p>
+                            <p> Area of triangle using Heron's formula =<b> {area} square centimeter</b></p>
                         </div>
-                        {/* EDITS REQUIRED HERE --> when sides dont make a triangle or zero */}
                     </form>
                 </div>
                 <div className="areaBox">
@@ -64,9 +68,8 @@ function Area(e) {
                         <input className="areaIP" required onChange={(e) => setPerpendicular(parseInt(e.target.value))} type="number" /><br />
                         <center><button id="submit" onClick={findArea}> Calculate area </button></center>
                         <div hidden={ar == undefined ? true : false}>
-                            <p> Area of triangle = {ar} square centimeter </p>
+                            <p> Area of triangle = <b>{ar} square centimeter</b> </p>
                         </div>
-                        {/* EDITS REQUIRED HERE --> check conditions for base and perpendicular */}
                     </form>
                 </div>
             </div>

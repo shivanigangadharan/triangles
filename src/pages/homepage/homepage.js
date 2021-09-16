@@ -9,7 +9,7 @@ function Homepage() {
             <div id="about">
                 <h1> Mad angle Triangle </h1>
                 <p>
-                    Welcome to Mad angle triangles. Click on the different options on the right to learn
+                    Welcome to Mad angle triangle. Click on the different options on the right to learn
                      about triangles and its various properties in a fun way. Explore and share this with your friends if you found it helpful.
 </p>
             </div>
