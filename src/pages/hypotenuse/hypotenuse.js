@@ -12,7 +12,7 @@ function Hypotenuse() {
             alert('Please enter valid input values.');
             return 0;
         }
-        setHypotenuse(Math.sqrt(base * base + perpendicular * perpendicular));
+        setHypotenuse(Math.sqrt(base * base + perpendicular * perpendicular).toFixed(2));
     }
 
     return (
